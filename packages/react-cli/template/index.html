@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+         <% if(h5)  { %> 
+        <script>
+            function setSize() {
+              var baseFontSize = 16; // 这个值要和下面插件的rootValue值一样
+              var baseWidth = 750; // 设计稿尺寸
+              var clientWidth = document.documentElement.clientWidth;
+              if (clientWidth > 750) {
+                clientWidth = 750;
+              }
+              document.documentElement.style.fontSize =
+                baseFontSize * (clientWidth / baseWidth) + "px";
+            }
+            setSize();
+            window.addEventListener("resize", setSize);
+          </script>
+         <% } %> 
+    </head>
+
+    <body>
+        <div id="root"></div>
+    </body>
+</html>

@@ -8,6 +8,7 @@ const config = {
 		// static: {
 		// 	directory: path.join(__dirname, '../dist'),
 		// },
+		cache: { type: 'filesystem' },
 		open: true,
 		port: 'auto',
 		proxy: {
